@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - BACKSPACE
-  - {t: ESC, h: BT}
+  - TAB
   - A
   - S
   - D
@@ -36,8 +36,8 @@ layers:
   - COMMA
   - DOT
   - UP
-  - FSLH
-  - {t: ESC, h: LCTL}
+  - RIGHT SHIFT
+  - LCTRL
   - LGUI
   - LALT
   - {t: SPACE, h: Num}
@@ -308,7 +308,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
