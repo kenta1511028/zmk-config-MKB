@@ -14,6 +14,7 @@
 #define BT 5
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -46,6 +47,62 @@
 };
 
 / {
+    behaviors {
+        mo_minus: mo_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO_MINUS";
+            bindings = <&kp MINUS>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mo_caret: mo_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO_CARET";
+            bindings = <&kp CARET>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mo_at: mo_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO_AT";
+            bindings = <&kp AT>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mo_colon: mo_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO_COLON";
+            bindings = <&kp COLON>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mo_semicolon: mo_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO_SEMICOLON";
+            bindings = <&kp SEMICOLON>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mo_backslash: mo_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO_BACKSLASH";
+            bindings = <&kp BACKSLASH>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -80,12 +137,12 @@
         Layer2 {
             label = "L2";
             bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans     &trans     &kp N8     &kp N9     &kp N0     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
-&trans    &trans  &trans               &trans     &trans      &kp ENTER  &kp ENTER             &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                         &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                                  &kp B
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mo_minus      &mo_caret  &kp NON_US_BACKSLASH  &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans         &mo_at     &kp LEFT_BRACKET      &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mo_semicolon  &mo_colon  &kp RIGHT_BRACKET     &trans
+&trans    &trans  &trans               &trans     &trans      &trans  &trans                   &kp SLASH  &mo_backslash         &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP      &kp ENTER  &kp PG_DN             &kp END
+                             &kp A                                              &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
