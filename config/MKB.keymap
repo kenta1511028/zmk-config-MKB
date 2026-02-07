@@ -38,17 +38,6 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
-/ {
-behaviors {
-mo2: mod-morph_2 {
-compatible = "zmk,behavior-mod-morph";
-#binding -cells = <2>;
-bindings = <&kp N2>, <&kp DQT>;
-mods = <(MOD_LSFT)>;
-};
-};
-};
-
 &mt {
     flavor = "balanced";
     tapping-term-ms = <280>;
