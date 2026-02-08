@@ -14,6 +14,7 @@
 #define BT 5
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -112,7 +113,7 @@
 &kp TAB        &kp A     &kp S      &kp D     &kp F          &kp G               &kp H           &kp J          &kp K      &kp L      &kp SEMI   &kp ENTER
 &kp LSHFT      &kp Z     &kp X      &kp C     &kp V          &kp B               &kp N           &kp M          &kp COMMA  &kp DOT    &kp UP     &kp RIGHT_SHIFT
 &kp LCTRL      &kp LGUI  &kp LALT             &lt NUM SPACE  &lt FUNC SPACE      &lt FUNC SPACE  &lt NUM SPACE             &kp LEFT   &kp DOWN   &kp RIGHT
-&kp LEFT       &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                          &kp HOME       &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+&mkp MB1       &mkp MB3  &kp SPACE  &mkp MB1  &mkp MB2                                           &kp HOME       &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                                     &kp A                                                                       &kp B
             >;
 
@@ -126,7 +127,7 @@
 &trans    &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND     &kp DOLLAR    &kp PERCENT       &kp AMPERSAND  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans        &trans
 &trans    &kp F1           &kp F2             &kp F3        &kp F4        &kp F5            &kp F6         &kp F7            &kp F8                &kp F9                 &kp F10       &trans
 &trans    &trans           &trans                           &trans        &trans            &trans         &trans                                  &trans                 &trans        &trans
-&kp LEFT  &kp UP           &kp SPACE          &kp DOWN      &kp RIGHT                                      &kp HOME          &kp PG_UP             &kp ENTER              &kp PG_DN     &kp END
+&mkp MB4  &kp UP           &kp SPACE          &kp DOWN      &mkp MB5                                       &kp HOME          &kp PG_UP             &kp ENTER              &kp PG_DN     &kp END
                                               &kp A                                                                          &kp B
             >;
 
@@ -136,12 +137,12 @@
         Layer2 {
             label = "L2";
             bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mo_minus      &mo_caret  &kp NON_US_BACKSLASH  &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans         &mo_at     &kp LEFT_BRACKET      &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mo_semicolon  &mo_colon  &kp RIGHT_BRACKET     &trans
-&trans    &trans  &trans               &trans     &trans      &trans  &trans                   &kp SLASH  &mo_backslash         &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP      &kp ENTER  &kp PG_DN             &kp END
-                             &kp A                                              &kp B
+&trans           &trans  &trans     &trans    &trans       &trans      &trans  &trans    &mo_minus      &mo_caret  &kp NON_US_BACKSLASH  &trans
+&trans           &trans  &trans     &trans    &trans       &trans      &trans  &trans    &trans         &mo_at     &kp LEFT_BRACKET      &trans
+&trans           &trans  &trans     &trans    &trans       &trans      &trans  &trans    &mo_semicolon  &mo_colon  &kp RIGHT_BRACKET     &trans
+&trans           &trans  &trans               &trans       &trans      &trans  &trans                   &kp SLASH  &mo_backslash         &trans
+&kp LC(LS(TAB))  &kp UP  &kp SPACE  &kp DOWN  &kp LC(TAB)                      &kp HOME  &kp PG_UP      &kp ENTER  &kp PG_DN             &kp END
+                                    &kp A                                                &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
