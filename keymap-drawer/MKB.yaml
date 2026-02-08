@@ -47,11 +47,11 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - LEFT
-  - UP
+  - '&mkp MB1'
+  - '&mkp MB3'
   - SPACE
-  - DOWN
-  - RIGHT
+  - '&mkp MB1'
+  - '&mkp MB2'
   - HOME
   - PG UP
   - ENTER
@@ -106,11 +106,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT
+  - '&mkp MB4'
   - UP
   - SPACE
   - DOWN
-  - RIGHT
+  - '&mkp MB5'
   - HOME
   - PG UP
   - ENTER
@@ -165,11 +165,11 @@ layers:
   - SLASH
   - {t: BACKSLASH, s: UNDERSCORE}
   - {t: ▽, type: trans}
-  - LEFT
+  - Ctl+Sft+TAB
   - UP
   - SPACE
   - DOWN
-  - RIGHT
+  - Ctl+TAB
   - HOME
   - PG UP
   - ENTER
